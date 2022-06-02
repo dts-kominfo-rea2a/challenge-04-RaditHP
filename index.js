@@ -14,11 +14,10 @@ const createDate = function (dates, posisi) {
     dateParsed.push(Date.parse(dates[i]));
     dateParsed[i] = dateParsed[i] / 1000;
   }
-  //dateParsed.sort();
   if (posisi != null) {
     return dateParsed[posisi].toString();
   } else {
-    return dateParsed.join("-").toString();
+    return dateParsed.sort().join("-").toString();
   }
 };
 
